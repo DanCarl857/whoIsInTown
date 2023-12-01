@@ -22,7 +22,6 @@ const EventsList: React.FC<Props> = ({ eventsData, onShowEvent }) => {
                             <Event
                                 key={event.id}
                                 event={event}
-                                image_url={eventsData[0].artist?.image_url}
                                 onShowEvent={onShowEvent}
                             />
                         )
