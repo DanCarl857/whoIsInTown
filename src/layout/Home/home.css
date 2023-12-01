@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    height: 100vh;
+    flex: 1;
+    flex-direction: row;
+    margin: 12px;
+    overflow-y: hidden
+}
