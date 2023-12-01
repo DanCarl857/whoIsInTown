@@ -64,7 +64,6 @@ const Home: React.FC = () => {
                             <Event
                                 key={event.id}
                                 event={event}
-                                image_url={favoriteEvents[0].artist?.image_url}
                                 onShowEvent={onShowEvent}
                             />
                         )
