@@ -4,6 +4,8 @@ import Card from "./Card/Card"
 import Socials from "./Socials/Socials"
 import Artist from "./Artist/Artist"
 import Event from "./Event/Event"
+import EventsList from "./EventsList/EventsList"
+import DetailedEvent from "./DetailedEvent/DetailedEvent"
 
 export {
     Searchbox,
@@ -11,5 +13,7 @@ export {
     Card,
     Socials,
     Artist,
-    Event
+    Event,
+    EventsList,
+    DetailedEvent
 }

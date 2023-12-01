@@ -17,7 +17,7 @@ const Searchbox: React.FC<Props> = ({
     setEventsData,
 }) => {
     const [artist, setArtist] = useState<string>('')
-
+    
     const onChangeHandler = (event: React.SyntheticEvent<EventTarget>) => {
         event?.preventDefault()
         setArtist((event.target as HTMLInputElement).value)

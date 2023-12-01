@@ -1,0 +1,4 @@
+.events-container {
+    overflow: auto;
+    height: 70vh;
+}
