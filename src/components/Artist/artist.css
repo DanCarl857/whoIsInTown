@@ -1,0 +1,26 @@
+.artist-img {
+    height: 200px;
+    width: 200px;
+    margin-right: 20px;
+    border-radius: 100px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.row a {
+    color: #2C3E50;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.row p:last-child {
+    margin-top: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}

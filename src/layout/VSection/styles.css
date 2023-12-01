@@ -1,0 +1,11 @@
+.v-section {
+    height: 100%;
+    padding: 20px;
+    flex: 1;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.v-section p {
+    margin: 10px 0px;
+}

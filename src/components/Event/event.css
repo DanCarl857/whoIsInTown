@@ -1,0 +1,16 @@
+.event-img {
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    margin-right: 20px;
+}
+
+.event-content p {
+    margin: 10px 0px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
