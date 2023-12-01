@@ -16,6 +16,7 @@ export type ArtistMetadataType = {
     tracking: [];
     upcoming_event_count: number;
     url: string;
+    error?: string;
 }
 
 export type LinkObjectType = {
