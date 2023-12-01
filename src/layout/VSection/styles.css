@@ -5,3 +5,7 @@
     margin-right: 10px;
     margin-left: 10px;
 }
+
+.v-section p {
+    margin: 10px 0px;
+}

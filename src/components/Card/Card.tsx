@@ -1,3 +1,5 @@
+import './card.css'
+
 interface Props {
     children: React.ReactNode
 }

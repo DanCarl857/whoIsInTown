@@ -8,40 +8,27 @@
 }
 
 .main {
-    flex: 1.2;
+    flex: 0.5;
     padding: 20px;
-}
-
-.card {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .row {
     display: flex;
     flex-direction: row;
-}
-
-.row a {
-    color: #2C3E50;
-    margin-right: 5px;
-    margin-top: 10px;
-}
-
-.row p:last-child {
-    margin-top: 20px;
+    justify-content: space-between;
 }
 
 .column {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.artist-img {
-    height: 200px;
-    width: 200px;
-    margin-right: 20px;
-    border-radius: 100px;
+.events-container {
+    overflow: auto;
+    height: 70vh;
 }
+
+.event-banner {
+    width: 100%;
+}
+

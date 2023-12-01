@@ -1,5 +1,4 @@
-import { useMemo } from 'react'
-import debounce from 'lodash.debounce'
+import { useState } from 'react'
 
 import './searchbox.css'
 import { getData } from '../../helpers/getData'
@@ -17,36 +16,43 @@ const Searchbox: React.FC<Props> = ({
     setArtistData,
     setEventsData,
 }) => {
-    const debounceChangeHandler = useMemo(() => debounce((event: React.SyntheticEvent<EventTarget>) => {
-        event.preventDefault()
-        let value = (event.target as HTMLInputElement).value
-        getAllData(value)
-    }, 500), [])
+    const [artist, setArtist] = useState<string>('')
 
-    const getAllData = async (name: string) => {
-        let url = `${constants.BASE_URL}/${name}?app_id=${constants.API_KEY}`
-        let eventsUrl = `${constants.BASE_URL}/${name}/events?app_id=${constants.API_KEY}&date=all`
+    const onChangeHandler = (event: React.SyntheticEvent<EventTarget>) => {
+        event?.preventDefault()
+        setArtist((event.target as HTMLInputElement).value)
+    }
 
-        try {
-            const [artistMetaData, events] = await Promise.all([
-                await getData(url),
-                await getData(eventsUrl)
-            ])
-            setArtistData(artistMetaData)
-            setEventsData(events)
-        } catch (error) {
-            // TODO: display error to user
-            console.log(error)
+    const getAllData = async () => {
+        console.log('Getting data for...', artist)
+        if (artist) {
+            let url = `${constants.BASE_URL}/${artist}?app_id=${constants.API_KEY}`
+            let eventsUrl = `${constants.BASE_URL}/${artist}/events?app_id=${constants.API_KEY}&date=upcoming`
+
+            try {
+                const [artistMetaData, events] = await Promise.all([
+                    await getData(url),
+                    await getData(eventsUrl)
+                ])
+                setArtistData(artistMetaData)
+                setEventsData(events)
+            } catch (error) {
+                console.log(error)
+            }
         }
     }
 
     return (
-        <input
-            className="input-field"
-            placeholder={placeholder}
-            type="text"
-            onChange={debounceChangeHandler}
-        />
+        <div className="row">
+            <input
+                className="input-field"
+                placeholder={placeholder}
+                type="text"
+                value={artist}
+                onChange={onChangeHandler}
+            />
+            <button onClick={() => getAllData()} className="button">Search</button>
+        </div>
     )
 }
 

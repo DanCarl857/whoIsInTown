@@ -1,5 +1,6 @@
 import { Socials } from "..";
 import { LinkObjectType } from "../../types/Api";
+import './artist.css'
 
 interface Props {
     image_url?: string;

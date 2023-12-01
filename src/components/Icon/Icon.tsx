@@ -8,7 +8,9 @@ import {
     IoLogoTwitch,
     IoLogoWhatsapp,
     IoLogoYoutube,
-    IoEarthOutline
+    IoEarthOutline,
+    IoHeartOutline,
+    IoDocumentTextOutline
 } from 'react-icons/io5'
 import { SiShazam, SiItunes } from 'react-icons/si'
 import { SlSocialSpotify } from 'react-icons/sl'
@@ -32,7 +34,9 @@ const Icon: React.FC<Props> = ({ name }) => {
         shazam: <SiShazam size={28} />,
         website: <IoEarthOutline size={30} />,
         itunes: <SiItunes size={30} />,
-        spotify: <SlSocialSpotify size={28} />
+        spotify: <SlSocialSpotify size={28} />,
+        heart: <IoHeartOutline size={28} />,
+        document: <IoDocumentTextOutline size={28} />
     }
     
     return Icons[name]

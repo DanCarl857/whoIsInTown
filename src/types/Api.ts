@@ -25,6 +25,7 @@ export type LinkObjectType = {
 
 export type EventMetadataType = {
     id: string;
+    artist?: ArtistMetadataType;
     artist_id: string;
     url: string;
     on_sale_datetime: string;
@@ -33,6 +34,8 @@ export type EventMetadataType = {
     venue: VenueMetadata;
     offers: [OfferMetadata];
     lineup: [string];
+    title?: string;
+    starts_at?: string;
 }
 
 export type VenueMetadata = {
@@ -42,6 +45,7 @@ export type VenueMetadata = {
     city: string;
     region: string;
     country: string;
+    street_address?: string;
 }
 
 export type OfferMetadata = {
