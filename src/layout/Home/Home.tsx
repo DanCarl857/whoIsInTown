@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './home.css'
 import { ArtistMetadataType, EventMetadataType } from '../../types'
 import { VSection } from '..'
-import { Searchbox } from '../../components'
+import { Searchbox, Card, Artist } from '../../components'
 
 const Home: React.FC = () => {
     const [artistData, setArtistData] = useState<ArtistMetadataType | undefined | void>()
@@ -22,20 +22,15 @@ const Home: React.FC = () => {
                     setArtistData={setArtistData}
                     setEventsData={setEventsData}
                 />
-                <div className="card">
-                    <div className="row">
-                        <div className="column">
-                            <img
-                                src={artistData?.image_url}
-                                className="artist-img"
-                            />
-                        </div>
-                        <div className="column">
-                            <p>Name: {artistData?.name}</p>
-                            <p>Upcoming Events: {artistData?.upcoming_event_count}</p>
-                        </div>
-                    </div>
-                </div>
+                <Card>
+                    <Artist
+                        image_url={artistData?.image_url}
+                        name={artistData?.name}
+                        links={artistData?.links}
+                        url={artistData?.url}
+                        upcoming_event_count={artistData?.upcoming_event_count}
+                    />
+                </Card>
             </div>
 
             <VSection>

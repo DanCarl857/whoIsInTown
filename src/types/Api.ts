@@ -3,7 +3,7 @@ export type ArtistMetadataType = {
     facebook_page_ur: string;
     id: string;
     image_url: string;
-    links: [string];
+    links: [LinkObjectType];
     mbid: string;
     name: string;
     options: {
@@ -15,6 +15,11 @@ export type ArtistMetadataType = {
     tracker_count: number;
     tracking: [];
     upcoming_event_count: number;
+    url: string;
+}
+
+export type LinkObjectType = {
+    type: string;
     url: string;
 }
 

@@ -23,21 +23,6 @@ const Searchbox: React.FC<Props> = ({
         getAllData(value)
     }, 500), [])
 
-    // const getArtistsData = async (name: string) => {
-    //     if (!name) {
-    //         setArtistData(undefined)
-    //         return
-    //     }
-    //     let url = `${constants.BASE_URL}/artists/${name}?app_id=${constants.API_KEY}`
-    //     const data = await getData(url)
-    //     if (data) {
-    //         setQuery(name)
-    //         setArtistData(data)
-    //     } else {
-    //         setArtistData(undefined)
-    //     }
-    // }
-
     const getAllData = async (name: string) => {
         let url = `${constants.BASE_URL}/${name}?app_id=${constants.API_KEY}`
         let eventsUrl = `${constants.BASE_URL}/${name}/events?app_id=${constants.API_KEY}&date=all`
