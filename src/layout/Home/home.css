@@ -6,3 +6,24 @@
     margin: 12px;
     overflow-y: hidden
 }
+
+.main {
+    flex: 1.5;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-img {
+    height: 200px;
+    width: 200px;
+    margin-right: 20px;
+}
