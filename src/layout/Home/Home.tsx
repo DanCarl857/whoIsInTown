@@ -14,6 +14,7 @@ const Home: React.FC = () => {
 
     const onShowEvent = (event: EventMetadataType) => setSelectedEvent(event)
     const onToggleFavorite = (event: EventMetadataType) => updateFavorites(event)
+    const clearSelectedEvent = () => setSelectedEvent(undefined)
 
     return (
         <div className='container'>
@@ -22,6 +23,7 @@ const Home: React.FC = () => {
                     placeholder='Enter artist name'
                     setArtistData={setArtistData}
                     setEventsData={setEventsData}
+                    clearSelectedEvent={clearSelectedEvent}
                 />
                 {artistData?.error ? 
                     <p>No artist found with that name</p> :
