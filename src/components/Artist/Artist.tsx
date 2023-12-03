@@ -3,11 +3,11 @@ import { LinkObjectType } from "../../types/Api";
 import './artist.css'
 
 interface Props {
-    image_url?: string;
-    name?: string;
-    upcoming_event_count?: number;
-    links?: [LinkObjectType];
-    url?: string;
+    image_url?: string,
+    name?: string,
+    upcoming_event_count?: number,
+    links?: [LinkObjectType],
+    url?: string
 }
 
 const Artist: React.FC<Props> = ({
@@ -17,7 +17,7 @@ const Artist: React.FC<Props> = ({
     links,
     url
 }) => (
-    <div className="row">
+    <div className="artist">
         <div className="column">
             <img
                 src={image_url}

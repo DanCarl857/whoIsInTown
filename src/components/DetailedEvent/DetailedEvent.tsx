@@ -16,22 +16,17 @@ const DetailedEvent: React.FC<Props> = ({ selectedEvent, onToggleFavorite }) => 
             <p>Date:<b> {new Date(selectedEvent.datetime).toUTCString()}</b></p>
             <p>
                 Lineup: {
-                    selectedEvent.lineup.map((artist) => {
-                        return (
-                            <span key={artist}> {artist} |</span>
-                        )
-                    })
+                    selectedEvent.lineup.map((artist) => (<span key={artist}> {artist} |</span>))
                 }
             </p>
             {selectedEvent.offers.length > 0 && <p>
                 Offers: {
-                    selectedEvent.offers.map((offer) => {
-                        return (
+                    selectedEvent.offers.map((offer) => (
                             <a key={offer.url} href={offer.url} target='_blank'>
                                 <span> {offer.type.toUpperCase()}</span> |
                             </a>
                         )
-                    })
+                    )
                 }
             </p>}
             <hr />
@@ -42,7 +37,7 @@ const DetailedEvent: React.FC<Props> = ({ selectedEvent, onToggleFavorite }) => 
             <hr />
             {selectedEvent.starts_at && <p>Event starts at: <b>{selectedEvent.starts_at}</b></p>}
             <p>Ticket sales begin: {new Date(selectedEvent.on_sale_datetime).toUTCString()}</p>
-            <div className="row">
+            <div className="icon-container">
                 <div onClick={() => onToggleFavorite(selectedEvent)}>
                     <Icon name="heart" color={isFavorited(selectedEvent)? 'red': ''} />
                 </div>
