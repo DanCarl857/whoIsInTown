@@ -2,13 +2,11 @@
 
 ## Running the app
 
-In the project directory, you can run:
-
 _Before running the app, you should have vite installed_
 
-### npm i -g vite
+### `npm i -g vite`
 
-Install all the dependencies need for the project to work properly
+Install all the dependencies needed for the project to work properly
 
 ### `npm install`
 
