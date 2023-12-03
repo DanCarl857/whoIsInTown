@@ -2,7 +2,7 @@ import React from 'react'
 import './styles.css'
 
 interface Props {
-    children?: React.ReactNode;
+    children?: React.ReactNode
 }
 
 const VSection: React.FC<Props> = ({ children }) => {

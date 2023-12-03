@@ -28,7 +28,7 @@ const EventsList: React.FC<Props> = ({ eventsData, onShowEvent }) => {
                     })}
                 </div> :
                 <div>
-                    <button className="button">See Past Events</button>
+                    <h4>No upcoming events...</h4>
                 </div>
             }
         </>

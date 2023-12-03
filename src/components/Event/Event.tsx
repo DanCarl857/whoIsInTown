@@ -3,7 +3,7 @@ import Card from "../Card/Card"
 import './event.css'
 
 interface Props {
-    event: EventMetadataType;
+    event: EventMetadataType,
     onShowEvent: (event: EventMetadataType) => void
 }
 
