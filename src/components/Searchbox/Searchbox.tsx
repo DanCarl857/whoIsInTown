@@ -62,12 +62,13 @@ const Searchbox: React.FC<Props> = ({
                 onChange={onChangeHandler}
             />
             <button onClick={() => getAllData()} className="button">
-                {isLoading ? <ColorRing
-                    visible={true}
-                    height="40"
-                    width="40"
-                    ariaLabel="blocks-loading"
-                    colors={['#fff', '#fff', '#fff', '#fff', '#fff']}
+                {isLoading ? 
+                    <ColorRing
+                        visible={true}
+                        height="40"
+                        width="40"
+                        ariaLabel="blocks-loading"
+                        colors={['#fff', '#fff', '#fff', '#fff', '#fff']}
                     /> : 
                     'Search'
                 }
